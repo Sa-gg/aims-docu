@@ -8,25 +8,35 @@
 
 ## 📄 WHERE IS THE LATEST FILE?
 
-Go to folder: **papers/AIMS/revisions/**
+**To submit or review the paper:**  
+Go to folder: **papers/AIMS/final/**  
+File: **`Orbigoso_Sagum_Zambra_AIMS_Chap1-2.pdf`** ← this is the submission-ready PDF
 
-**Look for the file with the HIGHEST version number** (v2, v3, v4, v5, etc.)
-
-That's the latest version to review or submit.
+**To edit the paper:**  
+Go to folder: **papers/AIMS/revisions/**  
+File with the **highest version number** is the latest editable `.docx`  
+Currently: `cha1&2_v8.docx`
 
 ---
 
 ## 📂 Folder Guide
 
+### **papers/AIMS/final/**
+Submission-ready exports. The PDF here is named after the authors' last names:
+`Orbigoso_Sagum_Zambra_AIMS_Chap1-2.pdf`
+
 ### **papers/AIMS/revisions/**
-This is where all the updated versions are saved.  
-Always get the file here with the highest number.
+All working `.docx` versions. Always create a new version — never overwrite.
+The file with the **highest number** is the latest.
+
+### **papers/AIMS/draft/**
+Teammate drafts and incoming files for review. Do not use as source of truth.
 
 ### **papers/AIMS/original/**
-Old backup copies. Don't use these.
+Original backup copy. **Do not touch.**
 
 ### **references/**
-Bibliography and citation lists.
+Bibliography and citation lists. Latest: `references_v7.docx` (annotated with section usage notes).
 
 ### **formats/**
 Formatting guides from our adviser.
@@ -35,12 +45,14 @@ Formatting guides from our adviser.
 
 ## 📝 How to Know Which File to Use
 
-**Simple rule:** The **NEWEST file** has the **BIGGEST number** in its name.
+**For submission:** Use the PDF in `papers/AIMS/final/`
+
+**For editing:** The **NEWEST `.docx`** in `revisions/` has the **BIGGEST number**.
 
 Example:
-- cha1&2_v2.docx
-- cha1&2_v3.docx
-- cha1&2_v5.docx ← **Use this one** (highest number)
+- cha1&2_v6.docx
+- cha1&2_v7.docx
+- cha1&2_v8.docx ← **Edit this one** (highest number)
 
 ---
 
@@ -49,7 +61,8 @@ Example:
 **Before submitting, PLEASE proofread the latest version:**
 
 ### Step 1: Get Reference Files
-- Open **papers/ATLAS/Curio_Gilera_Gromea_ATLAS_Chap1-2.pdf** (same school, same format)
+- Open **papers/AIMS/final/Orbigoso_Sagum_Zambra_AIMS_Chap1-2.pdf** (submission PDF)
+- Open **papers/ATLAS/Curio_Gilera_Gromea_ATLAS_Chap1-2.docx** (same school, same format)
 - Open **formats/caps-format.docx** and **formats/chap2-format.docx**
 
 ### Step 2: Check Formatting
@@ -81,4 +94,4 @@ Just check the **revisions** folder and pick the file with the **largest version
 
 ---
 
-Last Updated: March 30, 2026
+Last Updated: March 30, 2026 | Current version: v8 / PDF: Orbigoso_Sagum_Zambra_AIMS_Chap1-2.pdf
