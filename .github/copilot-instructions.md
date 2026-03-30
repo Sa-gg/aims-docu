@@ -39,8 +39,8 @@ AIMS DOCU/
 │   └── chap2-format.docx            ← Chapter 2 specific format guide
 │
 ├── references/
-│   ├── REFERENCES.docx              ← raw reference list
-│   └── updated_references_v3.docx   ← APA 7th edition reference list (verified)
+│   ├── references_v1_original.docx  ← original raw reference list
+│   └── references_v3.docx           ← APA 7th edition (matches cha1&2_v3.docx)
 │
 └── scripts/
     ├── build_v3.py                  ← script that built v3
@@ -55,10 +55,29 @@ AIMS DOCU/
 | v1 | `papers/AIMS/original/cha1&2_v1_original.docx` | Original — NEVER TOUCH |
 | v2 | `papers/AIMS/revisions/cha1&2_v2.docx` | Format fixed |
 | v3 | `papers/AIMS/revisions/cha1&2_v3.docx` | Verified citations |
-| v4 | `papers/AIMS/revisions/cha1&2_v4_chapter1-final.docx` | Current working version |
+| v4 | `papers/AIMS/revisions/cha1&2_v4_chapter1-final.docx` | Chapter 1 only (finalized) |
 | v5+ | `papers/AIMS/revisions/cha1&2_v5.docx` | Next version if needed |
 
 **Always create a new file in `papers/AIMS/revisions/` — never overwrite existing versions.**
+
+### Final Output Requirement
+
+The final deliverable `.docx` must contain **ALL chapters** (Chapter 1 and Chapter 2) in a single file — not just one chapter. When building a new version:
+
+1. Start from the latest version that has the most complete content.
+2. Apply changes or additions to the relevant chapter(s).
+3. Ensure the output file includes every chapter, not just the one being worked on.
+4. Do not strip out or omit chapters that were not modified in the current session.
+
+### Versioning Convention for References
+
+| Version | File | Status |
+|---------|------|--------|
+| v1 | `references/references_v1_original.docx` | Original raw reference list — NEVER TOUCH |
+| v3 | `references/references_v3.docx` | APA 7th edition (verified, matches cha1&2_v3.docx) |
+| v4+ | `references/references_v4.docx` | Next version if needed |
+
+**Reference files should match the version number of their corresponding paper.**
 
 ---
 
@@ -133,9 +152,18 @@ Do not duplicate these in new versions. These are verified and cited in `cha1&2_
 | Persky & Hughes | 2022 | Assessment in education | 10.5688/ajpe8906 |
 | Ramesh & Sanampudi | 2022 | Automated essay grading | 10.1007/s10462-021-10068-2 |
 | Susnjak et al. | 2022 | Learning analytics | 10.1186/s41239-021-00313-7 |
-| Bustillo & Aguilos | 2022 | Philippine local study | (DOI pending verification) |
-| Balase & Paglinawan | 2025 | Philippine local study | (DOI pending verification) |
-| Colegado | 2025 | Philippine local study | (DOI pending verification) |
+| Bustillo & Aguilos | 2022 | Philippine digital education (modular learning, COVID divide) | 10.3390/educsci12070449 |
+| Balase & Paglinawan | 2025 | Philippine LMS integration (DepEd LMS teacher narratives) | 10.37502/ijsmr.2025.81011 |
+| Colegado | 2025 | Philippine K-12 digital science tools scoping review | 10.47772/IJRISS.2025.903SEDU0479 |
+
+> ⚠️ **Colegado (2025) Warning:** This paper is real, but **it was misrepresented in v3**. The actual paper is a scoping review of digital science teaching tools in Philippine K-12 — it does NOT say "absence of integrated automated evaluation features aligned with local curriculum requirements." When writing v5+, either cite it accurately per its actual findings, or replace it with a more appropriate source.
+
+### New Candidates (Not Yet in Document — Add to v5+)
+
+| Author(s) | Year | Section | Topic | DOI |
+|-----------|------|---------|-------|-----|
+| Jumao-as et al. | 2025 | 1.4 Mastery-Lock | Reading remediation & mastery learning, Philippine DepEd elementary school | 10.9734/ajess/2025/v51i62000 |
+| Gajardo & Balahadia | 2025 | 1.5 Dashboard | Data-driven assessment web portal with performance dashboards, Philippines senior high school | 10.53378/ijstem.353233 |
 
 ---
 
@@ -146,6 +174,7 @@ These were identified as hallucinated/invalid in a prior AI session. Never sugge
 - **Tian et al. (2025) arXiv:2506.07955** — fabricated (arXiv ID 2506 = June 2026, a future date)
 - **Gagnon (2023) doi:10.1080/00094056.2023.2252447** — returns HTTP 404
 - **"Yang et al. (2025)"** — wrong attribution; correct authors are García-Varela et al.
+- **Colegado (2025) as cited in v3** — the paper is real (DOI: 10.47772/IJRISS.2025.903SEDU0479) but the v3 characterization of its findings is inaccurate. Do not repeat the misrepresented claim about "absence of automated evaluation features." Cite the paper only for what it actually says: barriers to digital science instruction in Philippine K-12 schools (infrastructure gaps, limited teacher preparation, LMS used mainly in urban schools).
 
 ---
 
@@ -202,6 +231,25 @@ When asked to find new literature:
 
 ---
 
+## Final Verification Checklist
+
+Before delivering any new `.docx` version, perform a final check to confirm:
+
+1. **All chapters present** — The output file contains every chapter (Chapter 1 and Chapter 2), not just the one that was edited.
+2. **Formatting correct** — Font is Times New Roman 12pt, double-spaced, 0pt space after, 0.5" first-line indent, justified body, centered headings.
+3. **Margins correct** — Top 1", Bottom 1", Left 1.5", Right 1".
+4. **No placeholder text** — No `[insert citation]`, `(Author, Year)`, or `TODO` markers remain anywhere in the document.
+5. **All citations are real** — Every in-text citation matches a verified reference with a working DOI.
+6. **Date range respected** — All cited sources are from 2021–2026.
+7. **Both local and foreign sources** — Each RRL section includes Philippine and international references.
+8. **Reference list matches** — Every in-text citation has a corresponding entry in the reference list, and vice versa.
+9. **No content lost** — Chapters or sections from the previous version were not accidentally removed or truncated.
+10. **File saved to correct location** — New version is in `papers/AIMS/revisions/` with the correct version number.
+
+If any check fails, fix it before delivering the file.
+
+---
+
 ## What NOT to Do
 
 - Do not modify `cha1&2.docx` (original)
@@ -210,3 +258,4 @@ When asked to find new literature:
 - Do not leave placeholder text like `[insert citation]` or `(Author, Year)` in any document
 - Do not reformat existing paragraphs unless explicitly asked
 - Do not add new sections or objectives not in the 5-module structure above
+- Do not output a file that contains only one chapter when the previous version had multiple chapters
