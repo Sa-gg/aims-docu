@@ -18,17 +18,47 @@ This workspace contains the thesis documents for:
 ```
 AIMS DOCU/
 ├── .github/
-│   └── copilot-instructions.md   ← this file
+│   └── copilot-instructions.md       ← this file
 ├── .vscode/
-│   └── mcp.json                  ← MCP server config (Semantic Scholar, Scholar Sidekick)
-├── .venv/                        ← Python virtual environment
-├── cha1&2.docx                   ← original document (DO NOT MODIFY)
-├── cha1&2_v2.docx                ← format-fixed version
-├── cha1&2_v3.docx                ← CURRENT version (verified citations)
-├── updated_references_v3.docx    ← APA 7th edition reference list
-├── build_v3.py                   ← script that built v3
-└── build_references_v3.py        ← script that built reference list
+│   └── mcp.json                      ← MCP server config (Semantic Scholar, Scholar Sidekick)
+├── .venv/                            ← Python virtual environment
+│
+├── papers/
+│   ├── AIMS/
+│   │   ├── original/
+│   │   │   └── cha1&2_v1_original.docx   ← PRESERVED original — DO NOT MODIFY
+│   │   └── revisions/
+│   │       ├── cha1&2_v2.docx            ← format-fixed version
+│   │       ├── cha1&2_v3.docx            ← verified citations version
+│   │       └── cha1&2_v4_chapter1-final.docx  ← CURRENT working version
+│   └── ATLAS/
+│       └── Curio_Gilera_Gromea_ATLAS_Chap1-2.pdf  ← friend's capstone (reference only)
+│
+├── formats/
+│   ├── caps-format.docx              ← capstone formatting guide
+│   └── chap2-format.docx            ← Chapter 2 specific format guide
+│
+├── references/
+│   ├── REFERENCES.docx              ← raw reference list
+│   └── updated_references_v3.docx   ← APA 7th edition reference list (verified)
+│
+└── scripts/
+    ├── build_v3.py                  ← script that built v3
+    ├── build_references_v3.py       ← script that built reference list
+    └── session.md                   ← prior AI session notes
 ```
+
+### Versioning Convention for AIMS Papers
+
+| Version | File | Status |
+|---------|------|--------|
+| v1 | `papers/AIMS/original/cha1&2_v1_original.docx` | Original — NEVER TOUCH |
+| v2 | `papers/AIMS/revisions/cha1&2_v2.docx` | Format fixed |
+| v3 | `papers/AIMS/revisions/cha1&2_v3.docx` | Verified citations |
+| v4 | `papers/AIMS/revisions/cha1&2_v4_chapter1-final.docx` | Current working version |
+| v5+ | `papers/AIMS/revisions/cha1&2_v5.docx` | Next version if needed |
+
+**Always create a new file in `papers/AIMS/revisions/` — never overwrite existing versions.**
 
 ---
 
@@ -119,16 +149,32 @@ These were identified as hallucinated/invalid in a prior AI session. Never sugge
 
 ---
 
-## Versioning Convention
+## Friend's Capstone Reference Paper — A.T.L.A.S.
 
-Never overwrite existing documents. Always create a new version:
+**File:** `papers/ATLAS/Curio_Gilera_Gromea_ATLAS_Chap1-2.pdf`
+**Authors:** Josh Nathan I. Curio, Rowena G. Gilera, Nehje John S. Gromea
+**Title:** A.T.L.A.S. (Automated Timetabling and Locations Allocation System): A Web-Based Academic Scheduling Application
+**Institution:** CHMSU — same school, same adviser (same formatting rules apply)
 
-| Version | File | Status |
-|---------|------|--------|
-| Original | `cha1&2.docx` | Preserved — do not touch |
-| v2 | `cha1&2_v2.docx` | Format fixed |
-| v3 | `cha1&2_v3.docx` | Current — verified citations |
-| v4+ | `cha1&2_v4.docx` | Next version if needed |
+Use this file for **reference and comparison only**. Do not cite it in A.I.M.S. chapters as an academic source.
+
+### Format Comparison: A.I.M.S. vs A.T.L.A.S.
+
+Both papers are from the same institution and adviser, so they must follow identical formatting rules.
+
+| Property | Required | A.I.M.S. v3 Status | A.T.L.A.S. Status |
+|----------|----------|---------------------|-------------------|
+| Font | Times New Roman 12pt | ✅ Correct | ✅ Correct |
+| Line spacing | Double (2.0) | ✅ Correct | ✅ Correct |
+| Space after paragraph | 0pt | ✅ Correct | ✅ Appears correct |
+| First-line indent (body) | 0.5 inch | ✅ Correct | ✅ Correct |
+| Alignment (body) | JUSTIFY | ✅ Correct | ✅ Correct |
+| Alignment (headings) | CENTER | ✅ Correct | ✅ Correct |
+| Margins | T:1" B:1" L:1.5" R:1" | Verify in .docx | Verify in .docx |
+
+**Key observation from A.T.L.A.S.:** Their Chapter 2 uses bold, left-aligned subheadings (not centered) for RRL section titles (e.g., "Visual Interactive Interfaces and Drag-and-Drop Functionality in Scheduling"). Verify with adviser whether A.I.M.S. Chapter 2 section headings should follow the same pattern.
+
+**Table formatting:** A.T.L.A.S. uses a landscape-oriented RRL matrix table (Table 1) with rotated column headers. If A.I.M.S. requires a similar matrix table, match the same structure with rotated headers.
 
 ---
 
