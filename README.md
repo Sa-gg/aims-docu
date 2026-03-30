@@ -21,25 +21,14 @@ Currently: `cha1&2_v8.docx`
 
 ## 📂 Folder Guide
 
-### **papers/AIMS/final/**
-Submission-ready exports. The PDF here is named after the authors' last names:
-`Orbigoso_Sagum_Zambra_AIMS_Chap1-2.pdf`
-
-### **papers/AIMS/revisions/**
-All working `.docx` versions. Always create a new version — never overwrite.
-The file with the **highest number** is the latest.
-
-### **papers/AIMS/draft/**
-Teammate drafts and incoming files for review. Do not use as source of truth.
-
-### **papers/AIMS/original/**
-Original backup copy. **Do not touch.**
-
-### **references/**
-Bibliography and citation lists. Latest: `references_v7.docx` (annotated with section usage notes).
-
-### **formats/**
-Formatting guides from our adviser.
+| Folder | Purpose |
+|--------|---------|
+| **papers/AIMS/final/** | Submission-ready exports. The PDF here is named after the authors' last names: `Orbigoso_Sagum_Zambra_AIMS_Chap1-2.pdf` |
+| **papers/AIMS/revisions/** | All working `.docx` versions. Always create a new version — never overwrite. The file with the **highest number** is the latest. |
+| **papers/AIMS/draft/** | Teammate drafts and incoming files for review. Do not use as source of truth. |
+| **papers/AIMS/original/** | Original backup copy. **Do not touch.** |
+| **references/** | Bibliography and citation lists. Latest: `references_v7.docx` (annotated with section usage notes). |
+| **formats/** | Formatting guides from our adviser. |
 
 ---
 
@@ -50,9 +39,10 @@ Formatting guides from our adviser.
 **For editing:** The **NEWEST `.docx`** in `revisions/` has the **BIGGEST number**.
 
 Example:
-- cha1&2_v6.docx
-- cha1&2_v7.docx
-- cha1&2_v8.docx ← **Edit this one** (highest number)
+
+-   cha1&2_v6.docx
+-   cha1&2_v7.docx
+-   cha1&2_v8.docx ← **Edit this one** (highest number)
 
 ---
 
@@ -61,28 +51,34 @@ Example:
 **Before submitting, PLEASE proofread the latest version:**
 
 ### Step 1: Get Reference Files
-- Open **papers/AIMS/final/Orbigoso_Sagum_Zambra_AIMS_Chap1-2.pdf** (submission PDF)
-- Open **papers/ATLAS/Curio_Gilera_Gromea_ATLAS_Chap1-2.docx** (same school, same format)
-- Open **formats/caps-format.docx** and **formats/chap2-format.docx**
+
+-   Open **papers/AIMS/final/Orbigoso_Sagum_Zambra_AIMS_Chap1-2.pdf** (submission PDF)
+-   Open **papers/ATLAS/Curio_Gilera_Gromea_ATLAS_Chap1-2.docx** (same school, same format)
+-   Open **formats/caps-format.docx** and **formats/chap2-format.docx**
 
 ### Step 2: Check Formatting
+
 Compare our paper with ATLAS and format guides:
-- ✓ Font: Times New Roman, 12pt
-- ✓ Line spacing: Double (2.0)
-- ✓ Margins: Top 1", Bottom 1", Left 1.5", Right 1"
-- ✓ First-line indent: 0.5 inch for body paragraphs
-- ✓ Alignment: JUSTIFY for body text, CENTER for main headings
+
+-   ✓ Font: Times New Roman, 12pt
+-   ✓ Line spacing: Double (2.0)
+-   ✓ Margins: Top 1", Bottom 1", Left 1.5", Right 1"
+-   ✓ First-line indent: 0.5 inch for body paragraphs
+-   ✓ Alignment: JUSTIFY for body text, CENTER for main headings
 
 ### Step 3: Read Line by Line
+
 Go through the paper slowly and check for:
-- **Mistypes**: Spelling errors, typos, wrong words
-- **Inconsistencies**: Citation format, spacing, capitalization
-- **Missing punctuation**: Periods, commas, etc.
-- **Awkward sentences**: Does it flow smoothly?
+
+-   **Mistypes**: Spelling errors, typos, wrong words
+-   **Inconsistencies**: Citation format, spacing, capitalization
+-   **Missing punctuation**: Periods, commas, etc.
+-   **Awkward sentences**: Does it flow smoothly?
 
 ### Step 4: Verify Citations
-- Every citation in parentheses (Author, Year) must appear in the References section
-- All years should be 2021-2026 only
+
+-   Every citation in parentheses (Author, Year) must appear in the References section
+-   All years should be 2021-2026 only
 
 **Take your time — even small mistakes can affect our grade!**
 
