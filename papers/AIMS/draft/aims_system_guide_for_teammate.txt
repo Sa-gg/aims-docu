@@ -1,0 +1,122 @@
+A.I.M.S. SYSTEM GUIDE FOR TEAMMATE REFERENCE
+
+Terminology Guide
+
+Student portal refers to the student-facing area of A.I.M.S. where learners access modules, take quizzes, receive remedial activities, view lesson availability, and submit tasks.
+
+Teacher dashboard refers to the teacher-facing area of A.I.M.S. where instructors review AI-generated content, monitor submissions, approve remedial quizzes, manage mastery settings, and oversee student progress.
+
+
+1.1. Centralized Learning Portal with Material Distribution and Task Submission
+
+Description:
+This is the core Learning Management System (LMS) of A.I.M.S. It serves as the central platform where teachers create classes, upload learning materials, distribute activities, and collect student submissions. On the student side, it appears as a student portal where learners can access assigned materials and submit completed tasks.
+
+Lifecycle in the System:
+
+Classroom Setup:
+The teacher creates a digital class or course and uploads learning materials such as PDFs, documents, and activity files.
+
+Content Publishing:
+The system organizes and publishes these materials to the student portal.
+
+Student Access:
+Students open the portal to view or download the assigned modules and activity instructions.
+
+Task Submission:
+Students upload and submit completed tasks, worksheets, or offline outputs through the same portal.
+
+Teacher Collection:
+The system records submission timestamps and makes the submitted files available for teacher review.
+
+
+1.2. AI-Powered Quiz Generator with Instructor Validation and Approval Controls
+
+Description:
+This module helps reduce teacher workload by generating draft quiz questions from teacher-provided materials or prompts. The AI prepares objective-type questions, such as multiple-choice items, including distractors and suggested answer keys. However, the teacher remains responsible for reviewing and approving the generated content before it is used.
+
+Lifecycle in the System:
+
+Input:
+The teacher selects a learning material or enters a topic prompt for the AI.
+
+AI Drafting:
+The system analyzes the provided content and generates a draft set of quiz questions, answer choices, and answer keys.
+
+Teacher Review:
+The teacher reviews the AI-generated draft and may edit, remove, or add questions to ensure accuracy and curriculum alignment.
+
+Approval and Publishing:
+After teacher approval, the finalized questions are saved and deployed as an active quiz.
+
+
+1.3. Automated Assessment and Grading Engine Supporting Teacher Validation
+
+Description:
+This module delivers quizzes to students, records their responses, and automatically scores objective questions. For subjective or open-ended items, it provides a workflow that allows teachers to manually review and validate responses before final grades are released.
+
+Lifecycle in the System:
+
+Assessment Delivery:
+The student opens the quiz through the system, which enforces rules such as time limits and secure response recording.
+
+Automatic Scoring:
+After submission, the system immediately checks objective answers against the stored answer key and computes a preliminary score.
+
+Teacher Validation:
+If the assessment includes subjective items, such as essays or short responses, the system forwards them to the teacher for manual checking.
+
+Grade Finalization:
+Once teacher validation is complete, the system calculates the final score, records it in the gradebook, and makes the result visible to the student.
+
+
+1.4. Dynamic Remedial Quiz Generator for Targeted Student Intervention
+
+Description:
+This module supports students who do not meet the required mastery level. When a student fails an assessment, the system generates a targeted remedial quiz based on the specific concepts the student did not master. The remedial quiz is not deployed automatically without oversight; instead, it is sent to the teacher for review and approval before being assigned.
+
+Lifecycle in the System:
+
+Trigger:
+A student fails to reach the required mastery threshold in an assessment.
+
+Gap Analysis:
+The system analyzes the student's incorrect responses to identify the topics or skills that need remediation.
+
+Remedial Quiz Drafting:
+The AI generates a remedial quiz focused on the identified learning gaps and stores it as a pending intervention.
+
+Teacher Approval:
+The teacher receives a notification in the teacher dashboard, reviews the remedial quiz, and approves or revises it before deployment.
+
+Student Re-Assessment:
+Once approved, the remedial quiz is assigned to the student through the student portal so the learner can address the identified weaknesses.
+
+Intervention Outcome:
+Completion of the remedial process may satisfy the requirement needed to continue within the mastery-based progression, depending on the configured rules.
+
+
+1.5. Mastery-Based Learning Module with Configurable Progression Locks
+
+Description:
+This module manages progression through lessons and activities by enforcing mastery requirements. It prevents students from moving to the next lesson or module until they demonstrate sufficient understanding of the prerequisite content. Teachers can enable or disable this feature and can also manually override a lock when necessary.
+
+Lifecycle in the System:
+
+Rule Configuration:
+The teacher enables the mastery lock and sets the required passing threshold for a specific quiz or lesson.
+
+Locked Progression:
+Students can see upcoming lessons or modules, but those items remain inaccessible until the required condition is met.
+
+Assessment Attempt:
+The student takes the prerequisite quiz or assessment.
+
+Pass Outcome:
+If the student meets the mastery threshold, the system automatically unlocks the next lesson or module.
+
+Fail Outcome:
+If the student does not meet the threshold, the next lesson remains locked and the student may be routed into the remedial workflow under Objective 1.4.
+
+Teacher Override:
+If needed, the teacher can manually unlock the next lesson even if the student has not yet passed the required assessment.
