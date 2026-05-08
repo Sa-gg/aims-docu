@@ -12,12 +12,6 @@ __pycache__/
 # VS Code workspace settings
 .vscode/
 
-# GitHub config (copilot instructions)
-.github/
-
-# Build scripts
-scripts/
-
 # Session/tracking files
 checklist.md
 session.md
