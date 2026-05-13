@@ -7,17 +7,34 @@ Hardware Requirements
 
 Table 1
 Hardware Components and Specification
-| Components | Minimum Specification | Recommended Specification |
-| :--- | :--- | :--- |
-| Server CPU | AMD Ryzen 5 (3000 Series+) or Intel Core i5 (10th Gen+) | AMD Ryzen 7 (5000 Series+) or Intel Core i7 (12th Gen+) |
-| Server RAM | 8 GB DDR4 | 16 GB to 32 GB DDR4/DDR5 |
-| Server Storage | 500 GB HDD / SSD | 1 TB NVMe SSD (RAID 1 Configuration) |
-| Network (ISP) | 25 Mbps stable Symmetric connection | 100 Mbps to 1 Gbps Symmetric Fiber |
-| Admin / Registrar Client | Intel Core i3 (10th Gen) or AMD Ryzen 3, 8 GB RAM | Intel Core i5 (12th Gen) or AMD Ryzen 5, 16 GB RAM |
-| Teacher / Staff Client | Intel Core i3 (8th Gen) or AMD Ryzen 3, 8 GB RAM | Intel Core i5 (11th Gen) or AMD Ryzen 5, 12 GB RAM |
-| Learner / Guardian (Mobile) | Android 10.0+ / iOS 15.0+, 4 GB RAM | Android 13.0+ / iOS 17.0+, 6 GB RAM |
+| Component | Minimum Specification | Recommended Specification | Justification |
+| :--- | :--- | :--- | :--- |
+| Server CPU | AMD Ryzen 5 (3000 Series+) or Intel Core i5 (10th Gen+) | AMD Ryzen 7 (5000 Series+) or Intel Core i7 (12th Gen+) | Handles concurrent AI quiz generation, grading computations, and multi-tenant request processing for up to 6,500 users. |
+| Server RAM | 8 GB DDR4 | 16 GB to 32 GB DDR4/DDR5 | Holds active session data, mastery analytics, and PostgreSQL working sets during peak concurrent access. |
+| Server Storage | 256 GB HDD / SSD | 1 TB NVMe SSD (RAID 1 Configuration) | Stores the PostgreSQL database, uploaded learning resources, AI-generated content, and system backups. |
+| Network (ISP) | 25 Mbps stable Symmetric connection | 100 Mbps to 1 Gbps Symmetric Fiber | Required for stable access by teachers and students via Cloudflare Tunnel from off-campus locations. |
+| Admin / Registrar Client | Intel Core i3 (10th Gen) or AMD Ryzen 3, 8 GB RAM | Intel Core i5 (12th Gen) or AMD Ryzen 5, 16 GB RAM | Needed to render the administrative dashboards, sync management panels, and data reporting interfaces. |
+| Teacher / Staff Client | Intel Core i3 (8th Gen) or AMD Ryzen 3, 8 GB RAM | Intel Core i5 (11th Gen) or AMD Ryzen 5, 12 GB RAM | Supports the interactive grading interface, quiz editor, and real-time class management features. |
+| Learner / Guardian (Mobile) | Android 10.0+ / iOS 15.0+, 4 GB RAM | Android 13.0+ / iOS 17.0+, 6 GB RAM | Ensures compatibility with the responsive student portal and modern browser rendering standards. |
 
 Software Requirements
-	The software environment for AIMS utilizes a modern full-stack PERN architecture (PostgreSQL, Express, React, Node.js) featuring PostgreSQL for relational data integrity and an Ubuntu-based Linux server for enhanced stability and security. To maximize efficiency on the school's local hardware, the system is deployed using Docker Compose for containerization, which allows for strict resource capping and process isolation. The application is designed to be entirely browser-based, ensuring that administrators, registrars, teachers, and learners can access the system using an up-to-date web browser such as Google Chrome, Microsoft Edge, or Mozilla Firefox without the need for additional local software installations. 
+	To successfully implement the AIMS module within the institution's integrated Enterprise Resource Planning (ERP) system, the dedicated on-premises server must be equipped with a specific suite of software components. The foundational requirement is a stable Linux distribution, specifically Ubuntu Server LTS 22.04 or higher, which provides the hosting environment for all unified backend services. For database management, PostgreSQL version 16 or higher must be installed to handle the localized storage of academic records, enrollment data, and mastery analytics via the Prisma ORM. Additionally, the Node.js v20 LTS runtime environment is required on the server to execute the core backend logic and asynchronous intervention tasks.
 
-	To accommodate the high user volume of 6,500 individuals on locally-provisioned hardware, the system is optimized through PM2 clustering and Nginx reverse proxying to offload static file serving and maximize concurrent request handling. While development was conducted on Windows 11, the system is deployed via Cloudflare Tunnel to provide a secure and responsive experience across various platforms and mobile devices. This setup makes the system more secure, accessible, and efficient, maintaining full compatibility with modern operating systems while ensuring data remains protected within the school's private local environment.
+	For efficient resource management and system stability, Docker and Docker Compose v2.x are utilized to containerize the monolithic services, providing strict memory capping and process isolation critical for the provided 8 GB RAM hardware. Nginx (version 1.24+) is necessary to serve as a high-performance reverse proxy and to handle the delivery of static frontend assets, thereby offloading processing requirements from the application server. The system also implements JWT and bcrypt protocols for secure authentication and credential hashing, ensuring controlled role-based access for Hinigaran National High School personnel. To support continuous delivery and rapid bug resolution, Git is used for version control and a CI/CD pipeline is integrated to automate testing and deployment, ensuring that any code fix or update can be pushed to the live server seamlessly without manual intervention. Additionally, AnyDesk is installed on the server to enable the development team to provide remote troubleshooting and maintenance support without requiring physical presence at the school site. On the client side, including administrative personnel, registrars, teachers, and students, no specialized software installation is required beyond a modern web browser capable of rendering the responsive portals through the secure Cloudflare Tunnel connection.
+
+Table 2
+Software Components and Requirements
+| Category | Requirement |
+| :--- | :--- |
+| Operating System | Ubuntu Server 22.04 LTS (Headless) |
+| Database | PostgreSQL 16.x with Prisma ORM |
+| Runtime | Node.js 20.x LTS |
+| Containerization | Docker Engine and Docker Compose v2.x |
+| Web Server / Reverse Proxy | Nginx 1.24+ (Static File Hosting and Reverse Proxy) |
+| Process Manager | PM2 (Internal Container Clustering) |
+| Public Exposure | Cloudflare Tunnel (Secure tunneling without port forwarding) |
+| Authentication | JSON Web Tokens (JWT) and bcrypt credential hashing |
+| Version Control | Git (source code management and change tracking) |
+| CI/CD Pipeline | GitHub Actions (automated testing and deployment on push) |
+| Remote Support | AnyDesk (remote desktop access for off-site troubleshooting) |
+| Client Requirement | Modern web browser (Google Chrome, Microsoft Edge, or Mozilla Firefox) |
